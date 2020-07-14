@@ -222,6 +222,7 @@ coeff
 ```
 ![Image](Loan_prediction_project/coeff.png)
 
+For the full code [press here](https://github.com/ankushbnayak/Loan-prediction-project/blob/master/Loan_prediction.ipynb)
 
 
     
