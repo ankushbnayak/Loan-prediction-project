@@ -50,11 +50,11 @@ df=df.rename(columns={'Yes':'Married','Male':'Gender','Yes':'Self_Employed'})
 _#Heat map after introducing dummy variables._
 
 
-![Image](https://github.com/ankushbnayak/Loan-prediction-project/blob/master/Loan_prediction_project/Heatmap2.png)
+![Image](Loan_prediction_project/Heatmap2.png)
  
 ### We can see that the attribute LoanAmount contains null values. We identify that the Loan Amount is related to whether the user is self employed. This is represented by the following Box-Plot
 
-![Image](https://github.com/ankushbnayak/Loan-prediction-project/blob/master/Loan_prediction_project/boxplot.png)
+![Image](Loan_prediction_project/boxplot.png)
 
 ### We write the impute_LoanAmount function to replace the null Loan Amount values with the values calculated by the function
 ```
@@ -83,7 +83,7 @@ sns.heatmap(df.isnull(),yticklabels=False,cbar=False,cmap='viridis')
 ```
 sns.countplot(x='Credit_History',data=df,palette='RdBu_r')
 ```
-![Image](https://github.com/ankushbnayak/Loan-prediction-project/blob/master/Loan_prediction_project/countplot1.png)
+![Image](Loan_prediction_project/countplot1.png)
 ```
 df['Credit_History'].fillna(1.0,inplace=True)
 ```
@@ -92,7 +92,7 @@ df['Credit_History'].fillna(1.0,inplace=True)
 ```
 sns.countplot(x='Loan_Amount_Term',data=df,palette='RdBu_r')
 ```
-![Image](https://github.com/ankushbnayak/Loan-prediction-project/blob/master/Loan_prediction_project/countplot2.png)
+![Image](Loan_prediction_project/countplot2.png)
 ```
 df['Loan_Amount_Term'].fillna(360,inplace=True)
 ```
@@ -101,7 +101,7 @@ df['Loan_Amount_Term'].fillna(360,inplace=True)
 ```
 sns.countplot(x='Dependents',data=df,palette='RdBu_r')
 ```
-![Image](https://github.com/ankushbnayak/Loan-prediction-project/blob/master/Loan_prediction_project/countplot3.png)
+![Image](Loan_prediction_project/countplot3.png)
 ```
 df['Dependents'].fillna(360,inplace=True)
 ```
@@ -109,7 +109,7 @@ df['Dependents'].fillna(360,inplace=True)
 ```
 sns.heatmap(df.isnull(),yticklabels=False,cbar=False,cmap='viridis')
 ```
-![Image](https://github.com/ankushbnayak/Loan-prediction-project/blob/master/Loan_prediction_project/heatmap3.png)
+![Image](Loan_prediction_project/heatmap3.png)
 
 ### StandardScaler will transform your data such that its distribution will have a mean value 0 and standard deviation of 1.Assume that all features are centered around 0 and have variance in the same order. If a feature has a variance that is orders of magnitude larger that others, it might dominate the objective function and make the estimator unable to learn from other features correctly as expected.
 
@@ -183,7 +183,7 @@ plt.title('Error Rate vs. K Value')
 plt.xlabel('K')
 plt.ylabel('Error Rate')
 ```
-![Image](https://github.com/ankushbnayak/Loan-prediction-project/blob/master/Loan_prediction_project/errorvsK.png)
+![Image](Loan_prediction_project/errorvsK.png)
 
 ### So from the graph wecan deduce that k=10 has least error rate. Hence we re_apply the algorithm for k=10.
 
@@ -220,7 +220,7 @@ lm.fit(X_train,Y_train)
 coeff=pd.DataFrame(lm.coef_,x.columns,columns=['Coefficient'])
 coeff
 ```
-![Image](https://github.com/ankushbnayak/Loan-prediction-project/blob/master/Loan_prediction_project/coeff.png)
+![Image](Loan_prediction_project/coeff.png)
 
 
 
