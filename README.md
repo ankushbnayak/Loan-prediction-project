@@ -27,7 +27,7 @@ _#Heat map showing values which are not available or null_
 ```
 sns.heatmap(df.isnull(),yticklabels=False,cbar=False,cmap='viridis')
 ```
-![Image](https://github.com/ankushbnayak/Loan-prediction-project/blob/master/Loan_prediction_project/heatmap1.png)
+![Image](Loan_prediction_project/heatmap1.png)
 
 We have to eliminate these null values
 
