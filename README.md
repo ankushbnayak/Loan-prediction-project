@@ -46,7 +46,10 @@ _#Rename the columns after data manipulation._
 ```
 df=df.rename(columns={'Yes':'Married','Male':'Gender','Yes':'Self_Employed'})
 ```
-_#Heat map after introducing dummy variables.
+_#Heat map after introducing dummy variables._
+
+
+![Image](https://github.com/ankushbnayak/ML_Algos/blob/master/Loan_prediction_project/Heatmap2.png)
 
 
 
