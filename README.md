@@ -221,7 +221,8 @@ coeff=pd.DataFrame(lm.coef_,x.columns,columns=['Coefficient'])
 coeff
 ```
 ![Image](Loan_prediction_project/coeff.png)
-**Now let us predict the loan amount for a random set of values.
+
+**Now let us predict the loan amount for a random set of values.**
 ```
 lm.predict([[1,0,3,1]])
 ```
