@@ -2,6 +2,8 @@
 
 ### Project Statement
 The idea behind this project is to build a model that will classify how much loan the user can take. It is based on the user’s marital status, education, number of dependents, and employments.
+### Approach
+I have used K-Nearest Neighbors (KNN) to predict the loan status of the applicant and linear model to estimate how much the user can given the user's details.
 ## Algorithm used
 ### K-Nearest Neighbors (KNN) Algorithm
 K-Nearest Neighbors (KNN) is one of the simplest algorithms used in Machine Learning for regression and classification problem. KNN algorithms use data and classify new data points based on similarity measures (e.g. distance function). Classification is done by a majority vote to its neighbors. The data is assigned to the class which has the nearest neighbors. As you increase the number of nearest neighbors, the value of k, accuracy might increase.
