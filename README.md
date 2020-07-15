@@ -198,11 +198,11 @@ print(accuracy_score(y_test,pred))
 ```
 ### We can see that the accuracy score has increased from 0.74 to 0.79.
 
-## Now we use linear regression to predict the loan amount based on user's marital status, education, number of dependents, and employments.
+## Now we use linear regression to predict the loan amount based on user's details.
 _#Assign the train and test datasets.
 ```
 x=df[['Married', 'Not Graduate', 'Dependents',
-       'Self_Employed']]
+       'Self_Employed','ApplicantIncome','CoapplicantIncome','Semiurban','Urban','Loan_Amount_Term']]
 y=df['LoanAmount']
 X_train,X_test,Y_train,Y_test=train_test_split(x,y,test_size=0.3,random_state=101)
 ```
@@ -214,19 +214,25 @@ _#Train the model to predict the values._
 lm=LinearRegression()
 lm.fit(X_train,Y_train)
 ```
+Now we find the intercept
+```
+print(lm.intercept_)
+```
+**53.85642282094781**
+
 ### Now we print the values of coefficients. These coefficients can be used to find the value of loan amount that the user can take given the user's marital status, education, number of dependents, and employments.
 
 ```
 coeff=pd.DataFrame(lm.coef_,x.columns,columns=['Coefficient'])
 coeff
 ```
-![Image](Loan_prediction_project/coeff.png)
+![Image](Loan_prediction_project/coeff1.png)
 
 **Now let us predict the loan amount for a random set of values.**
 ```
-lm.predict([[1,0,3,1]])
+lm.predict([[1,0,3,1,4000,3000,0,1,360]])
 ```
-**222.95255822**
+**187.17168163**
 
 For the full code [press here](https://github.com/ankushbnayak/Loan-prediction-project/blob/master/Loan_prediction(1).ipynb)
 
