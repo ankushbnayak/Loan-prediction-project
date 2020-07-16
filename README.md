@@ -113,7 +113,7 @@ sns.heatmap(df.isnull(),yticklabels=False,cbar=False,cmap='viridis')
 ```
 ![Image](Loan_prediction_project/heatmap3.png)
 
-### StandardScaler will transform your data such that its distribution will have a mean value 0 and standard deviation of 1.Assume that all features are centered around 0 and have variance in the same order. If a feature has a variance that is orders of magnitude larger that others, it might dominate the objective function and make the estimator unable to learn from other features correctly as expected.
+**StandardScaler will transform your data such that its distribution will have a mean value 0 and standard deviation of 1.Assume that all features are centered around 0 and have variance in the same order. If a feature has a variance that is orders of magnitude larger that others, it might dominate the objective function and make the estimator unable to learn from other features correctly as expected.**
 
 ```
 from sklearn.preprocessing import StandardScaler
@@ -230,7 +230,7 @@ print(lm.intercept_)
 ```
 **53.85642282094781**
 
-### Now we print the values of coefficients. These coefficients can be used to find the value of loan amount that the user can take given the user's marital status, education, number of dependents, and employments.
+**Now we print the values of coefficients. These coefficients can be used to find the value of loan amount that the user can take given the user's details**
 
 ```
 coeff=pd.DataFrame(lm.coef_,x.columns,columns=['Coefficient'])
