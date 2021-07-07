@@ -304,6 +304,12 @@ regr.predict([[1,0,3,1,4000,3000,0,1,360,1.0]])
 **123.46250175**
 
 ## Model performance comparision
+### Max_error
+The max_error function computes the maximum residual error , a metric that captures the worst case error between the predicted value and the true value. In a perfectly fitted single output regression model, max_error would be 0 on the training set and though this would be highly unlikely in the real world, this metric shows the extent of error that the model had when it was fitted.
+
+### Variance score
+The explained variance score explains the dispersion of errors of a given dataset. Scores close to 1.0 are highly desired, indicating better squares of standard deviations of errors.
+
 ![Image](Loan_prediction_project/Regression_comparision.png)
 
 ### For the full code [press here](https://github.com/ankushbnayak/Loan-prediction-project/blob/master/Loan_prediction(1).ipynb)
