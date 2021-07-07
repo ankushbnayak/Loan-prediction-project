@@ -303,7 +303,10 @@ regr.predict([[1,0,3,1,4000,3000,0,1,360,1.0]])
 ```
 **123.46250175**
 
-###For the full code [press here](https://github.com/ankushbnayak/Loan-prediction-project/blob/master/Loan_prediction(1).ipynb)
+## Model performance comparision
+![Image](Loan_prediction_project/Regression_comparision.png)
+
+### For the full code [press here](https://github.com/ankushbnayak/Loan-prediction-project/blob/master/Loan_prediction(1).ipynb)
 
 
    
