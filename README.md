@@ -302,7 +302,8 @@ RandomForestRegressor(bootstrap=True, ccp_alpha=0.0, criterion='mse',
 regr.predict([[1,0,3,1,4000,3000,0,1,360,1.0]])
 ```
 **123.46250175**
-For the full code [press here](https://github.com/ankushbnayak/Loan-prediction-project/blob/master/Loan_prediction(1).ipynb)
+
+###For the full code [press here](https://github.com/ankushbnayak/Loan-prediction-project/blob/master/Loan_prediction(1).ipynb)
 
 
    
