@@ -243,6 +243,65 @@ lm.predict([[1,0,3,1,4000,3000,0,1,360]])
 ```
 **187.17168163**
 
+# Bayesian Ridge regression
+Bayesian regression allows a natural mechanism to survive insufficient data or poorly distributed data by formulating linear regression using probability distributors rather than point estimates. The output or response ‘y’ is assumed to drawn from a probability distribution rather than estimated as a single value.
+```
+from sklearn import linear_model
+
+bm=linear_model.BayesianRidge()
+bm.fit(X_train,Y_train)
+
+BayesianRidge(alpha_1=1e-06, alpha_2=1e-06, alpha_init=None,
+              compute_score=False, copy_X=True, fit_intercept=True,
+              lambda_1=1e-06, lambda_2=1e-06, lambda_init=None, n_iter=300,
+              normalize=False, tol=0.001, verbose=False)
+```
+**Now let us predict the loan amount for a random set of values.**
+```
+bm.predict([[1,0,3,1,4000,3000,0,1,360,1.0]])
+```
+**143.98938586**
+# XGB regression
+Regression predictive modeling problems involve predicting a numerical value such as a dollar amount or a height. XGBoost can be used directly for regression predictive modeling.
+```
+from xgboost import XGBRegressor
+model=XGBRegressor()
+model.fit(X_train,Y_train)
+
+XGBRegressor(base_score=0.5, booster='gbtree', colsample_bylevel=1,
+             colsample_bynode=1, colsample_bytree=1, gamma=0,
+             importance_type='gain', learning_rate=0.1, max_delta_step=0,
+             max_depth=3, min_child_weight=1, missing=None, n_estimators=100,
+             n_jobs=1, nthread=None, objective='reg:linear', random_state=0,
+             reg_alpha=0, reg_lambda=1, scale_pos_weight=1, seed=None,
+             silent=None, subsample=1, verbosity=1)
+```
+**Now let us predict the loan amount for a random set of values.**
+```
+yhat = model.predict([[1,0,3,1,4000,3000,0,1,360,1.0]])
+```
+**155.877**
+
+# Random forest regressor
+A random forest is a meta estimator that fits a number of classifying decision trees on various sub-samples of the dataset and uses averaging to improve the predictive accuracy and control over-fitting. The sub-sample size is controlled with the max_samples parameter if bootstrap=True (default), otherwise the whole dataset is used to build each tree.
+```
+from sklearn.ensemble import RandomForestRegressor
+ regr = RandomForestRegressor(max_depth=2, random_state=0)
+ regr.fit(X_train,Y_train)
+
+RandomForestRegressor(bootstrap=True, ccp_alpha=0.0, criterion='mse',
+                      max_depth=2, max_features='auto', max_leaf_nodes=None,
+                      max_samples=None, min_impurity_decrease=0.0,
+                      min_impurity_split=None, min_samples_leaf=1,
+                      min_samples_split=2, min_weight_fraction_leaf=0.0,
+                      n_estimators=100, n_jobs=None, oob_score=False,
+                      random_state=0, verbose=0, warm_start=False)
+```
+**Now let us predict the loan amount for a random set of values.**
+```
+regr.predict([[1,0,3,1,4000,3000,0,1,360,1.0]])
+```
+**123.46250175**
 For the full code [press here](https://github.com/ankushbnayak/Loan-prediction-project/blob/master/Loan_prediction(1).ipynb)
 
 
